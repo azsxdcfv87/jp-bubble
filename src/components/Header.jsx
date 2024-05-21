@@ -23,21 +23,12 @@ const Header = () => {
   );
 };
 
-const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
-`;
-
-const navHeader = styled.div`
-  display: flex;
-  height: 64px;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-`;
+// const Body = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   overflow: hidden;
+// `;
 
 const NavHeader = styled.div`
   display: flex;
@@ -46,6 +37,7 @@ const NavHeader = styled.div`
   position: fixed;
   top: 0px;
   left: 0px;
+  background-color: gray;
 `;
 
 const NavHeaderAll = styled.div`
@@ -69,22 +61,5 @@ const NavHeaderTabLink = styled.div`
   display: flex;
   align-items: center;
 `;
-
-const NavHeaderTabDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 22px;
-  padding: 0 12px 13px;
-  margin-right: 4px;
-`;
-
-const HeaderShortsBadgeFree = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 333px;
-  transform: rotate(10deg);
-`;
-
-
 
 export default Header;
