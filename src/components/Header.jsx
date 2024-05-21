@@ -1,21 +1,25 @@
 import React from "react";
 
-
-
-
 const Header = () => {
-    return (
-        <div>
-            <div className="header-1">
-              <a href=" " className="logo"><i class="fas fa-gift"></i>Delivery</a>
-      
-            <form action="" className="search-box-container">
-               <input type="search" id="search-box" placeholder="search here"></input>
-               <label for="search-box" class="fas fa-search"></label>
-            </form>
-           </div>
-        </div>
-    )
-}
+  return (
+    <div class="NavHeader">
+      <div class="NavHeaderAll">
+        <nav class="NavHeader_Left">
+          <div class="NavHeader_Tab">
+            <a href=".#">
+              <div>探索</div>
+            </a>
+            <a href=".#">
+              <div>影片</div>
+            </a>
+            <a href=".#">
+              <div>短影音</div>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
+};
 
-export default Header
+export default Header;
