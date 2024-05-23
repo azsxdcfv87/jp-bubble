@@ -1,0 +1,22 @@
+.StyledBodyImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.BodyImageContent {
+  position: relative;
+  display: flex;
+  max-height: 25vh;
+  width: 100%;
+
+  .CenteredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    font-size: 24px;
+  }
+}

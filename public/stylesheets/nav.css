@@ -1,0 +1,27 @@
+.NavHeader {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  background-color: gray;
+}
+.NavHeader .NavHeaderAll {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.NavHeader .NavHeaderCenter {
+  display: flex;
+  padding-top: 10px;
+}
+.NavHeader .NavHeaderTab {
+  display: flex;
+  margin-left: 18px;
+}
+.NavHeader .NavHeaderTab .NavHeaderTabLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=nav.css.map */
