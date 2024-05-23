@@ -5,19 +5,22 @@ const Header = () => {
   return (
     <NavHeader>
       <NavHeaderAll>
-        <NavHeaderLeft>
+        <NavHeaderCenter>
           <NavHeaderTab>
-            <NavHeaderTabLink>
+            <NavHeaderTabLink href="#">
               <NavHeaderTab>首頁</NavHeaderTab>
             </NavHeaderTabLink>
-            <NavHeaderTabLink>
+            <NavHeaderTabLink href="#">
               <NavHeaderTab>地區選擇</NavHeaderTab>
             </NavHeaderTabLink>
-            <NavHeaderTabLink>
+            <NavHeaderTabLink href="#">
               <NavHeaderTab>服務介紹</NavHeaderTab>
             </NavHeaderTabLink>
+            <NavHeaderTabLink href="#">
+              <NavHeaderTab>表單填寫</NavHeaderTab>
+            </NavHeaderTabLink>
           </NavHeaderTab>
-        </NavHeaderLeft>
+        </NavHeaderCenter>
       </NavHeaderAll>
     </NavHeader>
   );
@@ -30,36 +33,36 @@ const Header = () => {
 //   overflow: hidden;
 // `;
 
-const NavHeader = styled.div`
+const NavHeader = styled.div.attrs({ className: 'NavHeader' })`
   display: flex;
   height: 64px;
   width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
   background-color: gray;
 `;
 
-const NavHeaderAll = styled.div`
+const NavHeaderAll = styled.div.attrs({ className: 'NavHeaderAll' })`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
   padding: 0 20px;
 `;
 
-const NavHeaderLeft = styled.div`
+const NavHeaderCenter = styled.div.attrs({ className: 'NavHeaderCenter' })`
   display: flex;
-  padding-top: 14px;
+  padding-top: 10px;
 `;
 
-const NavHeaderTab = styled.div`
+const NavHeaderTab = styled.div.attrs({ className: 'NavHeaderTab' })`
   display: flex;
-  margin-left: 20px;
+  margin-left: 18px;
 `;
 
-const NavHeaderTabLink = styled.div`
+const NavHeaderTabLink = styled.a.attrs({ className: 'NavHeaderTabLink' })`
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
 `;
 
 export default Header;
