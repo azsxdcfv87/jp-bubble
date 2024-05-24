@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));  // public 文件夾用於靜態資源
+app.set('views', path.join(__dirname, 'views'));
 // app.use(express.static(path.join(__dirname, 'build')));  // build 文件夾用於 React 構建輸出
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
@@ -15,9 +16,9 @@ app.get('/', (req, res) => {
   res.render('index', { homePageImage: homePageImage });
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 app.listen(port, () => {
   console.log(`Express is listening on localhost:${port}`)
