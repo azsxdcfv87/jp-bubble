@@ -1,0 +1,28 @@
+.ContentContainer {
+  margin: 30px 10px;
+  background-color: #ebe4f2;
+}
+.ContentContainer .ContentHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.ContentContainer .ContentBoxAll {
+  display: flex;
+  justify-content: center;
+}
+.ContentContainer .ContentBoxAll .ContentBox {
+  display: flex;
+  flex-direction: column;
+}
+.ContentContainer .ContentBoxAll .ContentBox .ContentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.ContentContainer .ContentBoxAll .ContentBox:not(:last-child) {
+  margin-right: 25px;
+}/*# sourceMappingURL=bodyContent.css.map */
