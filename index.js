@@ -13,7 +13,12 @@ app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
   const homePageImage = '/images/home_page_image.png';
-  res.render('index', { homePageImage: homePageImage});
+  const StoneOne = {
+    id: 1,
+    title: 'Jurassic World',
+    image: '/images/test.png',
+  }
+  res.render('index', { homePageImage: homePageImage , Stone: StoneOne});
 });
 
 
