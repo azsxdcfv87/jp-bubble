@@ -14,6 +14,7 @@
     <!-- 以下為css引入 -->
     <link rel="stylesheet" href="/stylesheets/nav.css">
     <link rel="stylesheet" href="/stylesheets/bodyImage.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
   </head>
   <body>
       <!-- navigation -->
@@ -38,7 +39,11 @@
       </div>
     </nav>
     <div id="root">
-      {{{ body }}}
+      <div class="main-content">
+        {{{ body }}}
+        {{> bodyContent }}
+      </div>
+      {{> footer }}
     </div>
   </body>
 </html>
