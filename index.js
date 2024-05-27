@@ -14,9 +14,28 @@ app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
   const homePageImage = '/images/home_page_image.png';
-  res.render('index', { homePageImage: homePageImage , Stones: StoneList.results });
+  res.render('index', { Stones: StoneList.results });
 });
 
+app.get('/:tabName', (req, res) => {
+  const { tabName } = req.params;
+  let template = '';
+
+  switch (tabName) {
+    case 'area-tab':
+      template = 'AreaContent';
+      break;
+    case 'service-tab':
+      template = 'ServiceContent';
+      break;
+    case 'form-tab':
+      template = 'FormContent';
+      break;
+    default:
+      template = 'index';
+  }
+  res.render(template, { area: tabName === 'area-tab', service: tabName === 'service-tab', form: tabName === 'form-tab' });
+});
 
 app.listen(port, () => {
   console.log(`Express is listening on localhost:${port}`)

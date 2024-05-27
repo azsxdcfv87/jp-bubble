@@ -23,11 +23,13 @@
 }
 .NavHeader .NavHeaderTab {
   display: flex;
-  margin-left: 18px;
 }
 .NavHeader .NavHeaderTab .NavHeaderTabLink {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
+}
+.NavHeader .NavHeaderTab .NavHeaderTabLink:not(:first-child) {
+  margin-left: 18px;
 }/*# sourceMappingURL=nav.css.map */

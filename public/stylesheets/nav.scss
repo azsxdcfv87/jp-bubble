@@ -25,13 +25,15 @@
 
   .NavHeaderTab {
     display: flex;
-    margin-left: 18px;
 
     .NavHeaderTabLink {
       display: flex;
       align-items: center;
       text-decoration: none;
       color: inherit;
+    }
+    .NavHeaderTabLink:not(:first-child) {
+      margin-left: 18px;
     }
   }
 }
