@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars')
+const StoneList = require('./StoneList.json')
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,12 +14,7 @@ app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
   const homePageImage = '/images/home_page_image.png';
-  const StoneOne = {
-    id: 1,
-    title: 'Jurassic World',
-    image: '/images/test.png',
-  }
-  res.render('index', { homePageImage: homePageImage , Stone: StoneOne});
+  res.render('index', { homePageImage: homePageImage , Stones: StoneList.results });
 });
 
 

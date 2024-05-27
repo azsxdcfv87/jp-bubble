@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "title": "皇帝",
+      "image": "/images/prepare.jpg",
+      "url": "https://www.e-vip.co.jp/sp/"
+    },
+    {
+      "id": 2,
+      "title": "男爵",
+      "image": "/images/prepare.jpg",
+      "url": "https://www.c-baron.com/sp/"
+    },
+    {
+      "id": 3,
+      "title": "王子",
+      "image": "/images/prepare.jpg",
+      "url": "https://rosso-martini.com/"
+    }
+  ]
+}

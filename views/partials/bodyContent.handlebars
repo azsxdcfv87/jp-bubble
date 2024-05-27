@@ -4,30 +4,17 @@
       深耕風俗
     </h1>
     <div class="ContentBoxAll">
+    {{#each Stones}}
+
       <div class="ContentBox">
-        <a href="/{{Stone.id}}" class="jp-link">
-          <img src="{{Stone.image}}" alt="JP Bubble" />
+        <a href="{{this.url}}" class="jp-link {{this.id}}">
+          <img src="{{this.image}}" alt="JP Bubble" />
         </a>
         <span class="ContentTitle">
-          {{Stone.title}}
+          {{this.title}}
         </span>
       </div>
-      <div class="ContentBox">
-        <a href="/" class="jp-link">
-          <img src="/images/test.png" alt="JP Bubble" />
-        </a>
-        <span class="ContentTitle">
-          Welcome to JP Bubble!
-        </span>
-      </div>
-      <div class="ContentBox">
-        <a href="/" class="jp-link">
-          <img src="/images/test.png" alt="JP Bubble" />
-        </a>
-        <span class="ContentTitle">
-          Welcome to JP Bubble!
-        </span>
-      </div>
+      {{/each}}
     </div>
   </div>
 </div>
