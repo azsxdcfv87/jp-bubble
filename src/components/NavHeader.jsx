@@ -1,10 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Home from './modals/Home';
-// import About from './modals/About';
-// import Area from './modals/Area';
-// import Service from './modals/Contact';
-// import Form from './modals/Form';
 import './stylesheets/nav.css'; // 匯入您的 CSS 文件
 
 const NavHeader = () => (
@@ -12,7 +7,7 @@ const NavHeader = () => (
     <div className="NavHeaderAll">
       <div className="NavHeaderCenter">
         <div className="NavHeaderTab">
-          <Link className="NavHeaderTabLink" to="/home" data-id="home-tab">
+          <Link className="NavHeaderTabLink" to="/" data-id="home-tab">
             <div className="homeTab">首頁</div>
           </Link>
           <Link className="NavHeaderTabLink" to="/about" data-id="about-tab">
