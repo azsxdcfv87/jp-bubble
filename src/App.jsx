@@ -11,9 +11,7 @@ const App = () => (
     <NavHeader />
     <div className="main-content">
       <BodyContent />
-    </div>
-    <div className='paginated-content'>
-        <Paginated />
+      <Paginated />
     </div>
     <Footer />
   </div>
