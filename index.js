@@ -1,44 +1,23 @@
 const express = require('express');
-const exphbs = require('express-handlebars')
-const StoneList = require('./StoneList.json')
 const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));  // public 文件夾用於靜態資源
-app.set('views', path.join(__dirname, 'views'));
-// app.use(express.static(path.join(__dirname, 'build')));  // build 文件夾用於 React 構建輸出
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'build')));
 
-app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' , partialsDir: path.join(__dirname, 'views/partials') }))
-app.set('view engine', 'handlebars')
-
-app.get('/', (req, res) => {
-  const homePageImage = '/images/home_page_image.png';
-  res.render('index', { Stones: StoneList.results });
+// API routes
+app.get('/api/hello', (req, res) => {
+  res.send({ message: 'Hello from the server!' });
 });
 
-app.get('/:tabName', (req, res) => {
-  const { tabName } = req.params;
-  let template = '';
-
-  switch (tabName) {
-    case 'area-tab':
-      template = 'AreaContent';
-      break;
-    case 'service-tab':
-      template = 'ServiceContent';
-      break;
-    case 'form-tab':
-      template = 'FormContent';
-      break;
-    default:
-      template = 'index';
-  }
-  res.render(template, { area: tabName === 'area-tab', service: tabName === 'service-tab', form: tabName === 'form-tab' });
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port, () => {
-  console.log(`Express is listening on localhost:${port}`)
-})
-
-
+  console.log(`Server listening on port ${port}`);
+});
